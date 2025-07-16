@@ -7,11 +7,13 @@
 /* 顏色 */
 :root{
     --neutral-300:#DEE2E6;
+    --neutral-500:#ADB5BD;
     --neutral-600:#6C757D;
     --neutral-900:#212529;
     --primary-200:#E8FEC5;
     --primary-300:#C0FA73;
     --primary-400:#57A203;
+    --danger-300:#D74F4F;
 
 }
 
@@ -20,7 +22,7 @@ body{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.05rem;
-    color: var(--neutral-900);
+    color: var(--neutrl-900);
 }
 
 
@@ -38,15 +40,29 @@ a{
     text-decoration: none;
     display: block;
     color: var(--neutrl-900);
+    font-family:"Noto Sans TC", "sans-serif";
 }
 p{
-     font-family:'Noto Sans TC', sans-serif;
+    font-family:'Noto Sans TC', sans-serif;
+    font-weight: 400;
 }
+h2{
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+
+}
+
 h3{
     font-size: 24px;
     line-height: 1.2;
     font-weight: 700;
+}
 
+h5{
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 h6{
@@ -55,12 +71,27 @@ h6{
     font-weight: 700;
     font-family:'Noto Sans TC', sans-serif;
 }
+
+
 img{
     
     display: block;
-    object-fit: cover;
 }
 
+
+.sm{
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.md{
+    font-weight: 500;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
 .pt-8{
     padding-top: 8px;
 }
@@ -97,7 +128,9 @@ img{
 .mb-4{
     margin-bottom: 4px;
 }
-
+.mb-8{
+    margin-bottom: 8px;
+}
 .mb-12{
     margin-bottom: 12px;
 }
@@ -122,6 +155,9 @@ img{
 .mr-12{
     margin-right: 12px;
 }
+.mr-24{
+    margin-right: 24px;
+}
 .mr-40{
     margin-right: 40px;
 }
@@ -136,7 +172,9 @@ img{
 .justify-content-sb{
     justify-content: space-between;
 }
-
+.fww{
+    flex-wrap: wrap;
+}
 
 .nav{
     align-items: center;
@@ -148,110 +186,99 @@ img{
     padding-right: 12px;
 }
 
+/*顏色*/
 .n3{
     color: var(--neutral-300);
 }
+
+.n5{
+    color: var(--neutral-500);
+}
+
 .n6{
     color: var(--neutral-600);
+    
+}
+
+.n9{
+    color: var(--neutral-900);
 }
 .p4{
     color: var(--primary-400);
 }
 
-.side-l{
-    width: 196px;
+.d3{
+    color: var(--danger-300);
 }
+
+/*格式*/
 .side-r{
-    flex:1;
-    flex-wrap: wrap;
-    padding-left: 12px;
-    padding-right: 12px;
+    max-width: 746px;
+    padding: 4px;
+   
 }
 .row{
+
+    margin-left: -4px;
+    margin-right: -4px;
+}
+.col-6{
+    
     display: flex;
     flex-wrap: wrap;
-    margin-left: -12px;
-    margin-right: -12px;
 }
-.col-4{
-    width: 33.3333%;
-    padding-left: 12px;
-    padding-right: 12px;
-}
-.col-4 img{
+
+.card img{
     width: 100%;
     height: auto;
 }
-/* .page  {
+.card{
+    width: 50%;
+    padding: 4px;
 
-    margin: 0 auto;
-} */
-
-.page a{
-    font-family:"Noto Sans TC", "sans-serif";
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.05rem;
-    color: var(--neutral-900);
-    padding: 8px 15px;
 }
 
-.page a:hover{
-    background-color: var(--primary-300);
-}
-.mga{
-    margin: 0 auto;
-}
-.member{
-    background-color:var(--primary-200) ;
+.side-l{
+    max-width: 526px;
 }
 
-.member button{
-    background-color: black;
-    color: white;
-    margin:  24px;
-    font-size: 16px;
-    font-weight: 500;
+.shoescolor-color{
+    max-width: 64px;
+    text-align: center;
+}
+.shoescolor-color img{
+    width: 100%;
+    height: auto;
+}
+
+.size-card{
+    max-width: 160px;
     padding: 12px 24px;
     border-radius: 4px;
-}
-
-.count{
-    margin-top:33.5px ;
-    margin-bottom: 33.5px;
-    
-}
-
-.footer{
-    max-width: 1296px;
-    margin: 64px auto;
-    
-}
-.footer-t{
-    border-bottom: 1px solid var(--neutral-300);
-}
-
-.footer-t-r{
-    color: var(--neutral-900);
-}
-
-.footer-b p{
-    color: var(--neutral-600);
-}
-.footer-b{
-    justify-content: center;
-}
-.copyright{
-    text-align: center;
+    font-size: 16px;
     line-height: 1.5;
+    font-weight: 500;
+    background-color: white;
+    text-align: center;
+    border: 1px solid var(--neutral-300);
 }
 
-.product-card{
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
+.size-card:hover{
+    border: 1px solid black;
 }
 
-.product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.size-card.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+button{
+    display: block;
+}
+
+.add-to-favorites{
+    max-width: 526px;
+    padding: 12px auto;
+    background-color: white;
 }
